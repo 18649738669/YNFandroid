@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/register_tv_title_2"
+        android:textColor="@color/common_black"
+        android:textSize="@dimen/text_mid" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_style_1"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:padding="10dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/code"/>
+                <EditText
+                    android:id="@+id/register_fragment_et_code"
+                    android:hint="@string/register_et_code"
+                    android:background="@null"
+                    android:textColorHint="@color/common_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/register_tv_time"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bg_style_4"
+                android:gravity="center"
+                android:text="59"
+                android:textSize="@dimen/text_more_large" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_style_1"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_width="22dp"
+                android:layout_height="30dp"
+                android:src="@drawable/lock"/>
+            <EditText
+                android:inputType="textPassword"
+                android:background="@null"
+                android:id="@+id/register_fragment_et_pwd"
+                android:hint="@string/login_et_pwd"
+                android:textColorHint="@color/common_black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textColor="@color/common_white"
+        android:background="@drawable/btn_normal_1"
+        android:text="@string/register_btn"
+        android:textSize="@dimen/text_mid" />
+
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.yinaf.dragon.Content.Activity.ChatMainAct">
+    <include layout="@layout/tb_common"/>
+
+    <RelativeLayout
+
+        android:id="@+id/activity_chat_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/chat_send_button"
+                android:text="@string/send_voice"
+                android:textColor="@color/common_white"
+                android:textSize="@dimen/text_mid"/>
+
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/chat_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_layout">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                app:stackFromEnd="true"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/voice_text"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_above="@id/bottom_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_voice"
+            android:drawableTop="@drawable/receiver_title_img"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/receiver_model"
+            android:textSize="13sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/chat_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <include
+                layout="@layout/rcd_hint_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>"
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
+

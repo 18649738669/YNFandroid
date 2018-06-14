@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    android:orientation="vertical">
+
+    <include layout="@layout/tb_friends_circle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_member"
+                style="@style/FamilySettingText"
+                android:text="@string/family_member_set" />
+
+            <TextView
+                android:id="@+id/tv_watches"
+                style="@style/FamilySettingText"
+                android:text="@string/family_watches_set" />
+
+            <TextView
+                android:id="@+id/tv_drug"
+                style="@style/FamilySettingText"
+                android:text="@string/family_drug_set" />
+
+            <TextView
+                android:id="@+id/tv_address_book"
+                style="@style/FamilySettingText"
+                android:text="@string/family_address_book_set" />
+
+            <TextView
+                android:id="@+id/tv_contacts"
+                style="@style/FamilySettingText"
+                android:text="@string/family_contacts_set" />
+
+            <TextView
+                android:id="@+id/tv_app"
+                style="@style/FamilySettingText"
+                android:text="@string/family_app_set" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/FamilySettingText"
+                android:text="@string/family_address_set" />
+
+            <TextView
+                android:id="@+id/tv_footstep"
+                style="@style/FamilySettingText"
+                android:text="@string/family_footstep_set" />
+
+            <TextView
+                android:id="@+id/tv_police"
+                style="@style/FamilySettingText"
+                android:text="@string/family_police_set" />
+
+            <TextView
+                android:id="@+id/tv_frequency"
+                style="@style/FamilySettingText"
+                android:text="@string/family_frequency_set" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

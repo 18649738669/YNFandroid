@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_style_2">
+    <TextView
+        android:id="@+id/dialog_pay_state_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text=""
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/common_blue"
+        android:textSize="@dimen/text_more_large" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/text_mid"
+        android:layout_margin="8dp">
+        <Button
+            android:id="@+id/dialog_pay_state_btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_normal_1"
+            android:text="@string/dialog_pay_state_btn_confirm"
+            android:textColor="@color/common_white"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/text_mid"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
+

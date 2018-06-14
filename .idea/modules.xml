@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WisdomEndowment.iml" filepath="$PROJECT_DIR$/WisdomEndowment.iml" />
+      <module fileurl="file://D:\AndroidProject\WisdomEndowment\imagepickerModule\WisdomEndowment-imagepickerModule.iml" filepath="D:\AndroidProject\WisdomEndowment\imagepickerModule\WisdomEndowment-imagepickerModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagepickerModule/imagepickerModule.iml" filepath="$PROJECT_DIR$/imagepickerModule/imagepickerModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webviewjavascriptbridge/webviewjavascriptbridge.iml" filepath="$PROJECT_DIR$/webviewjavascriptbridge/webviewjavascriptbridge.iml" />
+    </modules>
+  </component>
+</project>

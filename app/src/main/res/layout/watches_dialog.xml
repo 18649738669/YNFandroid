@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="是否确定删除当前手表?"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+
+                android:id="@+id/dialog_btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="#ff0000"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="0.5dp"
+                android:background="#ddd"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/dialog_btn_sure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="确定"
+                android:textColor="#000"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <View
+            android:layout_above="@+id/layout"
+            android:layout_width="match_parent"
+            android:background="#ddd"
+            android:layout_height="0.5dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

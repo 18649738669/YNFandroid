@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/text_large"
+        android:textColor="@color/common_blue"
+        android:text="输入您的昵称"
+        android:gravity="center"/>
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/add_family_rounded_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/rounded_img2"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"/>
+    <EditText
+        android:id="@+id/add_family_et_real_name"
+        android:layout_margin="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_style_5"
+        android:singleLine="true"
+        android:textSize="@dimen/text_mid"
+        android:hint="@string/add_family_et_real_name"/>
+
+</LinearLayout>

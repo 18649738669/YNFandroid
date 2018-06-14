@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/according">
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/map_info_window_tv_title"
+            android:layout_width="165dp"
+            android:layout_height="29dp"
+            android:gravity="center_vertical"
+            android:text="title"
+            android:textColor="@color/common_white" />
+        <TextView
+            android:id="@+id/map_info_window_tv_time"
+            android:layout_width="165dp"
+            android:layout_height="25dp"
+            android:text="time"
+            android:gravity="center_vertical"
+            android:textColor="@color/common_white"/>
+        <TextView
+            android:id="@+id/map_info_window_tv_content"
+            android:layout_width="165dp"
+            android:layout_height="match_parent"
+            android:text="content"
+            android:textColor="@color/common_white"
+            android:gravity="center_vertical"
+            android:ellipsize="none"
+            android:maxLength="60"
+            android:scrollHorizontally="false"
+            android:inputType="textMultiLine"
+            android:maxLines="5"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/map_info_window_tv_btn"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:text="导航"
+        android:textColor="@color/common_white"
+        android:textSize="@dimen/text_large"
+        android:gravity="center"/>
+
+</LinearLayout>

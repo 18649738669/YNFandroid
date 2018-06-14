@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string-array name="userType">
+        <item>腕表用户</item>
+        <item>APP用户</item>
+        <item>其他用户</item>
+    </string-array>
+
+    <string-array name="security_distance">
+        <item>1000米</item>
+        <item>2000米</item>
+        <item>3000米</item>
+    </string-array>
+
+    <string-array name="chart_title">
+        <item>计步</item>
+        <item>跑步</item>
+        <item>晨练</item>
+        <item>登山</item>
+        <item>游泳</item>
+    </string-array>
+
+    <string-array name="sport_list">
+        <item>跑步</item>
+        <item>晨练</item>
+        <item>登山</item>
+        <item>游泳</item>
+    </string-array>
+
+    <string-array name="service_time">
+        <item></item>
+        <item>一个月(30天)</item>
+        <item>三个月(3x30天)</item>
+        <item>半年(6x30天)</item>
+        <item>一年(12x30天)</item>
+        <item>两年(24x30天)</item>
+    </string-array>
+
+    <string-array name="chart_abnormal">
+        <item>计步数据</item>
+        <item>跑步数据</item>
+        <item>晨练数据</item>
+        <item>登山数据</item>
+        <item>游泳数据</item>
+    </string-array>
+    <string-array name="diets_type">
+        <item>早餐:</item>
+        <item>午餐:</item>
+        <item>晚餐:</item>
+    </string-array>
+    <string-array name="habits_type">
+        <item>吸烟: </item>
+        <item>饮酒: </item>
+    </string-array>
+
+    <string-array name="sport_item">
+        <item>跑步</item>
+        <item>晨练</item>
+        <item>散步</item>
+        <item>登山</item>
+        <item>游泳</item>
+    </string-array>
+
+</resources>

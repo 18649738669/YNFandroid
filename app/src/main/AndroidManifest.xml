@@ -1,0 +1,434 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yinaf.dragon">
+
+
+
+    <!-- Required  一些系统要求的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.ld.elderlywatchDemo.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 摄像头权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <!-- 电话录音 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Required -->
+    <permission
+        android:name="com.yinaf.dragon.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.yinaf.dragon.permission.JPUSH_MESSAGE" />
+
+
+
+
+    <application
+        android:name="com.yinaf.dragon.Tool.APP.App"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        //高德地图开发者申请的key
+        <meta-data android:name="com.amap.api.v2.apikey"
+            android:value="715867279e7e76176150e48b3e0206be"/>
+
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
+        <!-- 如：android:process=":remote" -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.example.jg" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".Content.Service.DownloadAPKService"/>
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.yinaf.dragon.Content.Receiver.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="com.yinaf.dragon"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Content.Activity.StartAct"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Content.Activity.LoginAct"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.RegisterAct"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.ChangePwdAct"
+            android:label="@string/title_activity_change_pwd"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.HomeAct"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/title_activity_home"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".Content.Activity.CaptureAct"
+            android:label="@string/title_activity_capture"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.ImeiAct"
+            android:label="@string/title_activity_imei"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.FriendsCircleAct"
+            android:label="@string/title_activity_friends_circle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.FamilySettingAct"
+            android:label="@string/family_tv_set_up_the"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Content.Activity.AddFamilyAct"
+            android:label="@string/title_activity_add_family"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.BindingFamilyAct"
+            android:label="@string/title_activity_binding_family"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.TimeDateAct"
+            android:label="@string/title_activity_time_date"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.AddressBookSetAct"
+            android:label="@string/family_address_book_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.AddressBookSetAddAct"
+            android:label="@string/family_address_book_add_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.AddressAddSetAct"
+            android:label="@string/family_address_add_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.MyAddressSetAct"
+            android:label="@string/family_address_add_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.MyAddressAddSetAct"
+            android:label="@string/family_address_add_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.RelationSelectAct"
+            android:label="@string/family_relation_select"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.AddressSetAct"
+            android:label="@string/family_address_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.AppSetAct"
+            android:label="@string/family_app_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.ContactsSetAct"
+            android:label="@string/family_contacts_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.ContactsSetAddAct"
+            android:label="@string/family_address_book_add_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.FootstepSetAct"
+            android:label="@string/family_footstep_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.WatchesSetAct"
+            android:label="@string/family_watches_Msg_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.FrequencySetAct"
+            android:label="@string/family_frequency_set"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.MemberSetAct"
+            android:label="@string/family_member_msg_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.MySettingAct"
+            android:label="@string/family_member_msg_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.MyActivityAct"
+            android:label="@string/my_activity"
+            android:theme="@style/AppTheme.NoActionBar" /><activity
+            android:name=".Content.Activity.NewsDetailsAct"
+            android:label="@string/news_details_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.WebViewAct"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.LeisureActivitiesAct"
+            android:label="@string/leisure_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.LeisureActivitiesDetailsAct"
+            android:label="@string/leisure_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.MemberActivitiesDetailsAct"
+            android:label="@string/leisure_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.ApplyActivityAct"
+            android:label="@string/apply_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.MemberSelectListAct"
+            android:label="@string/member_select_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.MemberTextWriteAct"
+            android:label="@string/family_member_msg_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.MemberSelectAct"
+            android:label="@string/family_member_msg_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.MemberListAct"
+            android:label="@string/family_member_msg_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.PoliceSetAct"
+            android:label="@string/family_police_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.DrugSetAct"
+            android:label="@string/family_drug_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.family_set.DrugSetAddAct"
+            android:label="@string/family_add_drug_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.StepGaugeDataAct"
+            android:label="@string/title_activity_step_gauge_date"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.SleepDataAct"
+            android:label="@string/title_activity_sleep_date"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.HeartReatDataAct"
+            android:label="@string/title_activity_heart_reta_date"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.BloodPressureDataAct"
+            android:label="@string/title_activity_blood_pressure_date"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Content.Activity.BloodSugarDataAct"
+            android:label="@string/title_activity_blood_sugar_date"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Content.Activity.PlaceAct"
+            android:label="@string/title_activity_place"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.HistoricalPositionAct"
+            android:label="@string/title_activity_historical_position"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.HistoricalMapAct"
+            android:label="@string/title_activity_historical_position"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.SecurityFenceAct"
+            android:label="@string/title_activity_security_fence"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.SetSecurityFenceAct"
+            android:label="@string/title_activity_security_fence"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.ServicePackageAct"
+            android:label="@string/title_activity_service_package"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.AnAlarmAct"
+            android:label="@string/title_activity_an_alarm"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.HealthRecordsAct"
+            android:label="@string/family_tv_health_records"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.HealthReportAct"
+            android:label="@string/title_activity_health_report"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.HealthReportWebViewAct"
+            android:label="@string/title_activity_health_report"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.MembersIntegralAct"
+            android:label="@string/family_tv_members_integral"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.ChatAct"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.ChatListAct"
+            android:label="@string/title_activity_chat_list"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.ChatMainAct"
+            android:label="@string/title_activity_chat_main_list"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.HelpAct"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.YinafAct"
+            android:label="@string/title_activity_yinaf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.MedicalReportListAct"
+            android:label="@string/health_records_ll_medical_report"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.MedicalReportAct"
+            android:label="@string/health_records_ll_medical_report"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.SmartDevicesAct"
+            android:label="@string/title_activity_smart_devices"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.AddSmartDevicesAct"
+            android:label="@string/title_activity_add_smart_devices"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.DoorLockSetAct"
+            android:label="@string/family_tv_set_up_the"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.DoorLockConfingurationAct"
+            android:label="@string/door_lock_configuration"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.DoorLockWifiAct"
+            android:label="@string/door_lock_wifi_title"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.family_set.WatchesPhoneSetAct"
+            android:label="@string/login_et_phone"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.FeedbackAct"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.SubmitFeedbackAct"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.MyFeedbackAct"
+            android:label="@string/title_activity_my_feedback"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Content.Activity.FeedbackDetailsAct"
+            android:label="@string/title_activity_feedback_details"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Content.Dialog.ChooseBindingDialog"
+            android:label="@string/title_activity_choose_binding_confirm_dialog"
+            android:theme="@style/AppTheme.Dialog" />
+        <activity
+            android:name=".Content.Dialog.UpdateApkDialog"
+            android:label="@string/title_activity_update_apk_dialog"
+            android:theme="@style/AppTheme.Dialog"/>
+        <activity
+            android:name=".Content.Dialog.DownloadApkDialog"
+            android:label="@string/title_activity_download_apk_dialog"
+            android:theme="@style/AppTheme.Dialog"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
+
+    </application>
+</manifest>

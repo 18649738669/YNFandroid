@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="30dp"
+              android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/voice_rcd_hint_rcding"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:gravity="bottom|center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/voice_rcd_hint_bg"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:minWidth="140dp">
+
+            <FrameLayout
+                android:id="@+id/point_layout"
+                android:layout_width="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_height="40dp">
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="120dp"
+                    android:background="#de745f"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/up_is_over"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/point_text"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/common_white"
+                    android:text="@string/finger_sliding_is_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+
+
+            <ImageView
+                android:id="@+id/up_img"
+                android:layout_above="@id/point_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/voice_up_img"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_above="@id/point_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="12dp"
+                android:src="@drawable/voice_img"/>
+
+            <ImageView
+                android:id="@+id/volume"
+                android:layout_above="@id/point_layout"
+                android:layout_toRightOf="@id/imageView1"
+                android:layout_marginLeft="@dimen/activity_padding_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/amp1"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

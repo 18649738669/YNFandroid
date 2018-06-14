@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/tb_common"/>
+    <TextView
+        android:id="@+id/historical_position_tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="日期"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/common_blue"
+        android:background="@drawable/bg_style_5"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+    <ListView
+        android:id="@+id/historical_position_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:textColor="@color/common_blue"
+        android:textSize="@dimen/text_huge"
+        android:gravity="center"
+        android:text="@string/prompt"/>
+
+</LinearLayout>

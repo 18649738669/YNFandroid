@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/split_line"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/item_home_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_white"
+        android:numColumns="4"
+        android:columnWidth="80dp"
+        android:stretchMode="columnWidth"
+        />
+    <include layout="@layout/view_interval_gray"/>
+
+</LinearLayout>

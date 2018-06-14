@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_back"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp">
+
+    <com.yinaf.dragon.Content.CustomUi.CircleImageView
+        android:id="@+id/chatlistitem_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/rounded_img2"/>
+
+    <TextView
+        android:id="@+id/chatlistitem_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/chatlistitem_head"
+        android:layout_alignRight="@id/chatlistitem_head"
+        android:background="@drawable/round_red_bg"
+        android:gravity="center"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/chatlistitem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/chatlistitem_head"
+        android:textColor="@color/Text_black"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/chatlist_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chatlistitem_name"
+        android:layout_marginLeft="@dimen/activity_padding_10"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="@dimen/padding_8"
+        android:layout_toRightOf="@id/chatlistitem_head"
+        android:textColor="@color/TextGray"/>
+
+    <TextView
+        android:id="@+id/chatlistitem_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/chatlistitem_head"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:textColor="@color/TextGray"/>
+</RelativeLayout>

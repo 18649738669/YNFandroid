@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tb_common" />
+
+    <com.yinaf.dragon.Content.CustomUi.CustomRefreshAndLoadMoreView
+        android:id="@+id/an_alarm_refresh_and_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yinaf.dragon.Content.CustomUi.CustomLoadMoreListView
+            android:id="@+id/an_alarm_lv"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:layout_height="match_parent" />
+    </com.yinaf.dragon.Content.CustomUi.CustomRefreshAndLoadMoreView>
+
+</LinearLayout>

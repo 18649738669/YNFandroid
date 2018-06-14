@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/change_pwd_tv_title_1"
+        android:textColor="@color/common_black"
+        android:textSize="@dimen/text_mid" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_margin="30dp"
+        android:background="@drawable/bg_style_1"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/phone"/>
+        <EditText
+            android:id="@+id/change_pwd_fragment_et_phone"
+            android:hint="@string/login_et_phone"
+            android:background="@null"
+            android:textColorHint="@color/common_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/common_blue"
+        android:visibility="gone"></LinearLayout>
+
+    <Button
+        android:id="@+id/change_pwd_btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textColor="@color/common_white"
+        android:background="@drawable/btn_normal_1"
+        android:text="@string/register_btn_next"
+        android:textSize="@dimen/text_mid" />
+
+
+</LinearLayout>

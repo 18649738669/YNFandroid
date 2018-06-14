@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="170dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_style_2">
+    <TextView
+        android:id="@+id/dialog_exit_tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/dialog_exit_confirm_tv_title"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/dark_green_text"
+        android:textSize="@dimen/text_more_large" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp">
+
+        <Button
+            android:id="@+id/dialog_exit_btn_confirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_normal_1"
+            android:text="@string/dialog_exit_confirm_btn_confirm"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/dialog_exit_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/btn_normal_1"
+            android:text="@string/dialog_exit_confirm_btn_cancel"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
+

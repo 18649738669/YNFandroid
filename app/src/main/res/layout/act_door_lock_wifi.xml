@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <include layout="@layout/tb_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="@dimen/text_more_large"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="若这不是你想要的网络，"/>
+        <TextView
+            android:id="@+id/door_lock_wifi_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="点击切换"
+            android:textColor="@color/common_blue"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_style_1">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_small"
+            android:text="网络" />
+        <TextView
+            android:id="@+id/door_lock_wifi_et_name"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_small"
+            android:textColor="@color/common_black"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_style_1">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_small"
+            android:text="密码" />
+        <EditText
+            android:id="@+id/door_lock_wifi_et_pwd"
+            android:hint="@string/door_lock_wifi_pwd"
+            android:background="@null"
+            android:textSize="@dimen/text_small"
+            android:textColor="@color/common_black"
+            android:inputType="textPassword"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/door_lock_wifi_ll_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="30dp">
+        <ImageButton
+            android:id="@+id/door_lock_wifi_radio"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/circle_no"
+            android:background="@null"
+            android:scaleType="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/door_lock_wifi_radio"
+            android:textSize="@dimen/text_mid"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/door_lock_wifi_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textColor="@color/common_white"
+        android:background="@drawable/btn_normal_1"
+        android:text="@string/door_lock_wifi_btn"
+        android:textSize="@dimen/text_mid" />
+
+</LinearLayout>

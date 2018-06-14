@@ -1,0 +1,333 @@
+<resources>
+    <string name="app_name">颐纳福</string>
+
+    <string name="default_toolbar_title"> </string>
+
+    <!--校验-->
+    <string name="phone_verify_error_empty">手机号码不能为空</string>
+    <string name="phone_verify_error_no_num">输入的手机号码不合法</string>
+    <string name="verification_verify_error_empty">验证码不能为空</string>
+    <string name="verification_verify_error_no_num">输入的验证码不合法</string>
+    <string name="psw_verify_error_empty">密码不能为空</string>
+    <string name="psw_verify_error__no_num">输入的密码不合法</string>
+
+    <!--activity标题-->
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_start">启动页</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_change_pwd">修改密码</string>
+    <string name="title_activity_home">首页</string>
+    <string name="title_activity_family">家人</string>
+    <string name="title_activity_server">服务</string>
+    <string name="title_activity_my">我的</string>
+    <string name="title_activity_capture">手表扫码</string>
+    <string name="title_activity_imei">填写IMEI</string>
+    <string name="title_activity_friends_circle">亲友圈</string>
+    <string name="title_activity_add_family">新增家人</string>
+    <string name="title_activity_binding_family">绑定家人</string>
+    <string name="title_activity_time_date">实时数据</string>
+    <string name="title_activity_step_gauge_date">计步数据</string>
+    <string name="title_activity_sleep_date">睡眠数据</string>
+    <string name="title_activity_heart_reta_date">心率数据</string>
+    <string name="title_activity_blood_pressure_date">血压数据</string>
+    <string name="title_activity_blood_sugar_date">血糖数据</string>
+    <string name="title_activity_choose_binding_confirm_dialog">绑定弹窗</string>
+    <string name="title_activity_update_apk_dialog">更新APP</string>
+    <string name="title_activity_download_apk_dialog">下载APP</string>
+    <string name="title_activity_place">手表定位</string>
+    <string name="title_activity_historical_position">历史定位</string>
+    <string name="title_activity_security_fence">安全围栏</string>
+    <string name="title_activity_service_package">服务续费</string>
+    <string name="title_activity_an_alarm">警报提醒</string>
+    <string name="title_activity_health_report">健康报告</string>
+    <string name="title_activity_chat">微聊</string>
+    <string name="title_activity_chat_list">聊天列表</string>
+    <string name="title_activity_chat_main_list">聊天页面</string>
+    <string name="title_activity_help">常见问题</string>
+    <string name="title_activity_yinaf">颐纳福商城</string>
+    <string name="title_activity_smart_devices">智能设备</string>
+    <string name="title_activity_add_smart_devices">添加设备</string>
+    <string name="title_activity_feedback">意见反馈</string>
+    <string name="title_activity_my_feedback">我的反馈</string>
+    <string name="title_activity_feedback_details">反馈详情</string>
+
+    <!--登陆页面-->
+    <string name="login_et_phone">手机号码</string>
+    <string name="login_et_pwd">密码</string>
+    <string name="login_tv_register">注册</string>
+    <string name="login_tv_forgot_pwd">忘记密码</string>
+    <string name="login_btn_landing">登录</string>
+    <!--注册页面-->
+    <string name="register_tv_title_1">手机号将成为你的账号</string>
+    <string name="register_tv_title_2">请输入验证码</string>
+    <string name="register_btn_next">下一步</string>
+    <string name="register_tv_existing_account">已有账号,返回登录</string>
+    <string name="register_fm_user_server_agreement">用户服务协议</string>
+    <string name="register_fm_registration_consent_regarded">注册即视为同意</string>
+    <string name="register_btn">注册</string>
+    <string name="register_et_code">验证码</string>
+    <!--修改密码页面-->
+    <string name="change_pwd_tv_title_1">请输入手机号码</string>
+    <string name="change_pwd_tv_title_2">请输入验证码</string>
+    <string name="change_pwd_btn_next">下一步</string>
+    <string name="change_pwd_btn">修改</string>
+
+    <!--首页页面-->
+    <string name="home_tv_home">首页</string>
+    <string name="home_tv_family">家人</string>
+    <string name="home_tv_server">服务</string>
+    <string name="home_tv_my">我的</string>
+    <!--首页fragment-->
+    <string name="home_tv_my_application">我的应用</string>
+    <string name="home_tv_information">实时资讯</string>
+    <string name="home_tv_legal_aid">法律援助</string>
+    <string name="home_tv_realty_service">物业服务</string>
+    <string name="home_tv_my_activities">我的活动</string>
+
+    <!--家人fragment-->
+    <string name="family_tv_title">家人</string>
+    <string name="family_tv_name">暂无亲友</string>
+    <string name="family_tv_item_title">我的动态</string>
+    <string name="family_lv_item_my_step_content">今天已经走了5000步</string>
+    <string name="family_lv_item_my_step_time">小明在12:00发布了动态</string>
+    <string name="family_lv_item_my_step_check">立即查看</string>
+    <string name="family_tv_real_time_date">实时数据</string>
+    <string name="family_tv_package">服务套餐</string>
+    <string name="family_tv_friends_circle">亲友圈</string>
+    <string name="family_tv_place">定位</string>
+    <string name="family_tv_members_integral">成员积分</string>
+    <string name="family_tv_health_records">健康档案</string>
+    <string name="family_tv_an_alarm">警报提示</string>
+    <string name="family_tv_set_up_the">设置</string>
+
+
+    <!--服务-->
+    <string name="service_tv_life_service">生活服务</string>
+    <string name="service_tv_health_service">健康服务</string>
+    <string name="service_tv_yinafu">颐纳福</string>
+    <string name="service_tv_shopping">百货</string>
+    <string name="service_tv_house">家政</string>
+    <string name="service_tv_eat">订餐</string>
+    <string name="service_tv_doctor">护士上门</string>
+    <string name="service_tv_telemedicine">远程医疗</string>
+    <string name="service_tv_healthy">健康体检</string>
+    <string name="service_tv_channel">绿色通道</string>
+
+    <!--我的fragment-->
+    <string name="my_tv_name">昵称</string>
+    <string name="my_tv_address">常用地址</string>
+    <string name="my_tv_activity">我的活动</string>
+    <string name="my_tv_help">常见帮助</string>
+    <string name="my_tv_message">意见反馈</string>
+    <string name="my_tv_set">设置</string>
+    <string name="my_tv_order">我的订单</string>
+    <string name="my_tv_exit">退出登录</string>
+
+    <!--二维码扫描页面-->
+    <string name="capture_tv_switching">开启/关闭闪光灯</string>
+    <string name="capture_tv_imei">填写IMEI</string>
+    
+    <!--填写IMEI页面-->
+    <string name="imei_et_prompt">请填写IMEI</string>
+    <string name="imei_btn_next">下一步</string>
+
+    <!--亲友圈页面-->
+    <string name="friends_circle_btn_right">编辑</string>
+    <string name="friends_circle_tv_add_family">新增家人</string>
+    <string name="friends_circle_tv_binding_family">绑定家人</string>
+    <!--新增家人页面-->
+    <string name="add_family_tv_previous_step">上一步</string>
+    <string name="add_family_tv_next_step">下一步</string>
+    <string name="add_family_title_rela">与用户关系</string>
+    <string name="add_family_title_sex">性别</string>
+    <string name="add_family_title_birthday">出生年月</string>
+    <string name="add_family_title_height">身高</string>
+    <string name="add_family_title_weight">体重</string>
+    <string name="add_family_title_blood">血型</string>
+    <string name="add_family_title_real_name">昵称</string>
+    <string name="add_family_et_real_name">输入昵称</string>
+    <!--绑定家人页面-->
+    <string name="binding_family_et_member_id">请输入成员编号</string>
+    <string name="binding_family_et_code">请输入验证码</string>
+    <string name="binding_family_tv_code">发送验证码</string>
+    <!--实时数据-->
+    <string name="tool_bar_time_date_title_step_gauge">计步</string>
+    <string name="tool_bar_time_date_title_sleep">睡眠</string>
+    <string name="tool_bar_time_date_title_heart_rate">心率</string>
+    <string name="tool_bar_time_date_title_blood_pressure">血压</string>
+    <string name="tool_bar_time_date_title_blood_sugar">血糖</string>
+    <string name="time_date_tv_all_date">全部数据</string>
+    <string name="time_date_tv_error_date">异常数据</string>
+    <string name="time_date_tv_time">当前日期</string>
+    <string name="time_date_tv_day">每日</string>
+    <string name="time_date_tv_weeks">每周</string>
+    <string name="time_date_tv_month">每月</string>
+    <!--定位页面-->
+    <string name="place_tv_electricity">尚未连接</string>
+    <string name="place_btn">定位</string>
+
+    <!--地图菜单-->
+    <string name="map_menu_tv_one">历史定位</string>
+    <string name="map_menu_tv_two">安全围栏</string>
+    <!--安全围栏-->
+    <string name="set_security_fence_et_name">请输入地址名称</string>
+    <string name="set_security_fence_et_address">请长按地图获取地址</string>
+    <!--服务套餐-->
+    <string name="package_tv_generate_orders">生成订单</string>
+    <string name="package_tv_equipment_imei">设备IMEI码</string>
+    <string name="package_tv_phone">电话号码</string>
+    <string name="package_tv_service_expiration_time">服务到期时间</string>
+    <string name="package_tv_the_service_time">服务时长</string>
+    <string name="package_tv_due_the_time">到期时间</string>
+    <string name="package_tv_package">套餐</string>
+    <string name="package_tv_service_fee">服务费</string>
+    <string name="package_tv_combined">合计</string>
+    <string name="package_tv_function_description">健康报告、数据监测、健康管理、健康饮食</string>
+
+    <!--微聊  聊天界面-->
+    <string name="send_voice">发语音</string>
+    <string name="receiver_model">听筒</string>
+    <string name="speaker_model">免提</string>
+    <string name="up_click_isover">松开 结束</string>
+    <string name="up_is_over">松开取消发送</string>
+    <string name="finger_sliding_is_over">手指上滑 取消发送</string>
+    <string name="up_is_over_too">取消 发送</string>
+    <string name="url_is_error">语音url不正确</string>
+    <string name="click_so_little">录音时间太短</string>
+    <string name="cancel_send">已取消发送</string>
+    <string name="cannot_find_file">未找到文件</string>
+    <string name="no_more_chatmessage">没有更多消息</string>
+
+    <!--选择绑定腕表dialog弹窗-->
+    <string name="dialog_exit_confirm_tv_title">未添加成员</string>
+    <string name="dialog_exit_confirm_tv_title1">未添加腕表</string>
+    <string name="dialog_exit_confirm_tv_title2">未添加电话号码</string>
+    <string name="dialog_exit_confirm_btn_confirm">去添加</string>
+    <string name="dialog_exit_confirm_btn_cancel">取消</string>
+
+    <!--DownloadAPKDialog-->
+    <string name="dialog_download_apk_tv">颐纳福</string>
+    <!--支付方式选择弹窗-->
+    <string name="dialog_pay_tv_title">请选择支付方式</string>
+    <string name="dialog_pay_btn_wx">微信</string>
+    <string name="dialog_pay_btn_zfb">支付宝</string>
+    <string name="dialog_pay_btn_cancel">取消</string>
+    <string name="dialog_pay_state_btn_confirm">确定</string>
+    <!--是否续费选择弹窗-->
+    <string name="dialog_whether_renew_tv_title">套餐未到期，是否续费</string>
+    <string name="dialog_whether_renew_btn_confirm">确定</string>
+    <string name="dialog_whether_renew_btn_cancel">取消</string>
+
+    <!--健康报告-->
+    <string name="health_records_ll_health_report">健康报告</string>
+    <string name="health_records_ll_medical_report">体检报告</string>
+
+    <!--添加设备-->
+    <string name="add_smart_devices_text_1">请输入12位网关序列号</string>
+    <string name="add_smart_devices_text_name">设备名称</string>
+    <string name="add_smart_devices_text_btn">扫一扫</string>
+
+    <!--门锁设置-->
+    <string name="door_lock_set_name">门锁名称</string>
+    <string name="door_lock_set_lock_number">门锁序列号</string>
+    <string name="door_lock_set_gateway_number">网关序列号</string>
+    <string name="door_lock_set_sign_time">设备建立时间</string>
+    <string name="door_lock_set_gateway_information">配置网关信息</string>
+    <string name="door_lock_set_unbinding">解绑设备</string>
+    <!--配置流程-->
+    <string name="door_lock_configuration">配置流程</string>
+    <string name="door_lock_btn_configuration">开始配置网关网络</string>
+    <!--配置网关WIFI信息-->
+    <string name="door_lock_wifi_pwd">请输入WIFI密码</string>
+    <string name="door_lock_wifi_title">配置网关WIFI信息</string>
+    <string name="door_lock_wifi_radio">显示密码</string>
+    <string name="door_lock_wifi_btn">配置</string>
+
+    <!--意见反馈-->
+    <string name="feedback_tv_application">APP应用</string>
+    <string name="feedback_tv_watches">腕表</string>
+    <string name="feedback_tv_power_consumption">耗电</string>
+    <string name="feedback_tv_watch_appearance">腕表外表</string>
+    <string name="feedback_tv_other">其他</string>
+    <string name="feedback_et_problem">请描述您遇到的问题，提交问题需要连接网络。如果您有多个问题，请用换行符分开，以便于我们更好的识别您的问题。</string>
+
+
+
+
+    <!--error Message-->
+    <string name="act_login_tip_unconnect_network">当前网络未连接，请先检查网络连接</string>
+    <string name="act_login_tip_login_success">登录成功</string>
+    <string name="act_login_tip_login_error">登录失败，请重新登录</string>
+    <string name="act_register_tip_register_success">注册成功</string>
+    <string name="act_register_tip_register_error">注册失败</string>
+    <string name="act_Change_pwd_tip_Change_pwd_success">修改密码成功</string>
+    <string name="act_Change_pwd_tip_Change_pwd_error">修改密码失败</string>
+    <string name="act_login_tip_autologin_success">自动登录成功</string>
+    <string name="act_login_tip_autologin_error">自动登录失败，请重新登录</string>
+    <string name="act_forgive_pwd_get_code">获取验证码成功</string>
+    <string name="do_not_find_place">未找到地址</string>
+
+    <string name="mi">米</string>
+    <string name="save">保存</string>
+    <string name="edit">编辑</string>
+    <string name="cancle">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="element">元</string>
+    <string name="prompt">暂无数据！</string>
+    <string name="no_message">暂无消息</string>
+    <string name="voice_chat_message">语音消息</string>
+    <string name="app_tip">提示</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
+
+    <!--家人 设置-->
+    <string name="family_address_book_set">通讯录</string>
+    <string name="family_address_set">地址管理</string>
+    <string name="family_app_set">关联 APP</string>
+    <string name="family_contacts_set">紧急联系人</string>
+    <string name="family_footstep_set">步长设置</string>
+    <string name="family_frequency_set">发送频率</string>
+    <string name="family_member_set">成员设置</string>
+    <string name="family_member_msg_set">基本资料</string>
+    <string name="family_police_set">警报范围</string>
+    <string name="family_drug_set">服药提醒</string>
+    <string name="family_add_drug_set">添加提醒</string>
+    <string name="family_add_address_book_set">添加联系人</string>
+    <string name="family_add_address_set">添加地址</string>
+    <string name="family_drug_set_add">添加提醒</string>
+    <string name="family_address_book_add_set">添加联系人</string>
+    <string name="family_relation_select">与成员关系</string>
+    <string name="family_address_add_set">添加地址</string>
+    <string name="txt_save">保存</string>
+    <string name="family_watches_set">手表设置</string>
+    <string name="tv_delete">删除</string>
+    <string name="tv_no_binding">解绑</string>
+    <string name="family_watches_Msg_set">设备信息</string>
+    <string name="my_frg">我的</string>
+    <string name="my_address">常用地址</string>
+    <string name="my_indent">我的订单</string>
+    <string name="my_activity">我的活动</string>
+    <string name="my_setting">设置</string>
+    <string name="my_help">常见帮助</string>
+    <string name="my_idea">意见反馈</string>
+    <string name="my_login">退出登录</string>
+    <string name="leisure_activity">休闲活动</string>
+    <string name="apply_activity">报名活动</string>
+    <string name="member_select_list">选择成员</string>
+
+    <string name="please_open_write_per">请打开读写权限</string>
+    <string name="please_open_camera_per">请打开相机权限</string>
+    <string name="please_open_callphoen_per">请打开拨号权限</string>
+    <string name="please_open_mic_per">请打开录音权限</string>
+    <string name="please_open_pick_content_per">请打开读取联系人权限</string>
+    <string name="please_open_location_per">请打开定位权限</string>
+    <string name="please_open_need_per">请打开必要的权限</string>
+    <string name="news_details_set">资讯详情</string>
+
+</resources>

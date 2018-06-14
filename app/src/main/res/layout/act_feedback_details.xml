@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/tb_friends_circle"/>
+    <TextView
+        android:id="@+id/feedback_details_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/text_small"
+        android:gravity="center_vertical"
+        android:text="问题："
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/common_black"/>
+    <TextView
+        android:id="@+id/feedback_details_tv_reply"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/text_small"
+        android:layout_marginLeft="@dimen/text_small"
+        android:gravity="center_vertical"
+        android:text="颐纳福回复："
+        android:textSize="@dimen/text_small"/>
+    <TextView
+        android:id="@+id/feedback_details_tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/text_small"
+        android:gravity="center_vertical|right"
+        android:text="2018-05-31"
+        android:textSize="@dimen/text_small"/>
+    <LinearLayout
+        android:id="@+id/feedback_details_ll_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_small"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的评价"
+            android:textColor="@color/common_black"/>
+        <RadioGroup
+            android:id="@+id/feedback_details_rg_evaluation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/text_small">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/common_black"
+                android:layout_height="match_parent"
+                android:id="@+id/feedback_details_rb_1"
+                android:background="@drawable/bg_style_5"
+                android:text="有帮助"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/common_black"
+                android:layout_height="match_parent"
+                android:id="@+id/feedback_details_rb_2"
+                android:background="@drawable/bg_style_5"
+                android:layout_marginLeft="@dimen/text_small"
+                android:layout_marginRight="@dimen/text_small"
+                android:text="帮助不大"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/common_black"
+                android:layout_height="match_parent"
+                android:id="@+id/feedback_details_rb_3"
+                android:background="@drawable/bg_style_5"
+                android:text="没有帮助"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+</LinearLayout>

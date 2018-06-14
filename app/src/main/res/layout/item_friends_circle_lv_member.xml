@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/friends_circle_lv_item_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/friends_circle_lv_item_image_rounded"
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            android:layout_marginRight="@dimen/text_mid"
+            android:layout_marginLeft="@dimen/text_mid"
+            android:src="@drawable/rounded_img2"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"/>
+        <TextView
+            android:id="@+id/friends_circle_lv_item_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:textSize="@dimen/text_small"/>
+        <ImageView
+            android:id="@+id/friends_circle_lv_item_image_deputy"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/main"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/friends_circle_lv_item_delete"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/common_red"
+        android:textSize="@dimen/text_small"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@android:color/white" />
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tb_common_orange" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:padding="0.5dp"
+        android:background="@drawable/bg_style_9">
+        <TextView
+            android:id="@+id/blood_pressure_data_tv_all_data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/text_mid"
+            android:text="@string/time_date_tv_all_date"
+            android:background="@drawable/tv_background_style_8"/>
+        <TextView
+            android:id="@+id/blood_pressure_data_tv_error_data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_mid"
+            android:textColor="@color/common_orange"
+            android:text="@string/time_date_tv_error_date"
+            android:background="@drawable/tv_background_style_7"/>
+    </LinearLayout>
+
+    <com.yinaf.dragon.Content.CustomUi.CustomRefreshAndLoadMoreView
+        android:id="@+id/blood_pressure_data_refresh_and_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yinaf.dragon.Content.CustomUi.CustomLoadMoreListView
+            android:id="@+id/blood_pressure_data_lv"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:layout_height="match_parent" />
+    </com.yinaf.dragon.Content.CustomUi.CustomRefreshAndLoadMoreView>
+
+
+</LinearLayout>

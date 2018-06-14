@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tb_friends_circle" />
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edt_test"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:hint="请输入"
+            android:textColorHint="#999"
+            android:padding="10dp"
+            android:background="@drawable/btn_normal_dialog"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_unit"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="CM"
+            android:layout_width="50dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

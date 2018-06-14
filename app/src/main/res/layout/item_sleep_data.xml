@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/sleep_data_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/common_light_white">
+        <TextView
+            android:id="@+id/sleep_data_item_tv_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="2018-4-26"
+            android:textColor="@color/common_gray"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/sleep_data_item_tv_deep"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0小时50分"
+            android:textColor="@color/common_gray"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/sleep_data_item_tv_shallow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="7小时50分"
+            android:textColor="@color/common_gray"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

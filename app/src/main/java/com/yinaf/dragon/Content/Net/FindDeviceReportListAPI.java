@@ -1,0 +1,60 @@
+package com.yinaf.dragon.Content.Net;
+
+import com.android.volley.Request;
+import com.yinaf.dragon.Tool.APP.Builds;
+import com.yinaf.dragon.Tool.DB.SPHelper;
+import com.yinaf.dragon.Tool.Utils.LogUtils;
+
+import org.json.JSONObject;
+
+/**
+ * Created by long on 2018-4-27.
+ * 功能：分页获取体检报告数据集合接口
+ */
+
+public class FindDeviceReportListAPI extends DragonAPI {
+
+    public FindDeviceReportListListener listener;
+    public String memberId;
+    public String sessionId;
+    public String rows;
+    public String page;
+    public FindDeviceReportListAPI(FindDeviceReportListListener listener, String memberId, int page){
+        this.listener = listener;
+        this.memberId = memberId;
+        this.rows = 20 + "";
+        this.page = page + "";
+        this.sessionId = SPHelper.getString(Builds.SP_USER,"sessionId");
+        LogUtils.d("[FindDeviceReportList-params]" + gson.toJson(params));
+        new DragonBasicHttp(this).request();
+    }
+
+
+    @Override
+    public String getUrl() {
+        return Builds.HOST + "/mobile/device/findDeviceReportList"+"?memberId="+memberId+"&sessionId="+sessionId+"&rows="+rows+"&page="+page;
+    }
+
+    @Override
+    public int getHttpType() {
+        // TODO Auto-generated method stub
+        return Request.Method.GET;
+    }
+
+    @Override
+    public void requestSuccess(JSONObject data) throws Exception {
+        listener.findDeviceReportListSuccess(data);
+    }
+
+    @Override
+    public void requestError(long code, String msg) {
+
+        listener.findDeviceReportListError(code,msg);
+
+    }
+
+    public interface FindDeviceReportListListener{
+        public void findDeviceReportListSuccess(JSONObject content);
+        public void findDeviceReportListError(long code, String msg);
+    }
+}

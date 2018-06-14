@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tb_friends_circle" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="1dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="走路散步"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:phoneNumber="true"
+            android:id="@+id/edt_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入步长"
+            android:maxLength="15"
+            android:paddingRight="10dp"
+            android:textColor="#000"
+            android:textColorHint="#999"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="CM"
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="1dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="跑步"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:phoneNumber="true"
+            android:id="@+id/edt_run"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入步长"
+            android:maxLength="15"
+            android:paddingRight="10dp"
+            android:textColor="#000"
+            android:textColorHint="#999"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="CM"
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:layout_marginBottom="1dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="提示"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/edt_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="一般老年人的走路散步步长正常范围在30~70cm之间，跑步步长正常范围一般在50~100cm之间。"
+            android:maxLength="15"
+            android:padding="20dp"
+            android:textColor="#000"
+            android:textColorHint="#999"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_normal_1"
+        android:text="保存"
+        android:textColor="#fff"
+        android:textSize="15sp" />
+</LinearLayout>

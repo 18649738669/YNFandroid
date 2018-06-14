@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tb_common"/>
+
+    <EditText
+        android:id="@+id/imei_et_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="@dimen/text_mid"
+        android:hint="@string/imei_et_prompt"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_style_5"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/imei_btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/imei_btn_next"
+        android:textSize="@dimen/text_mid"
+        android:textColor="@color/common_white"
+        android:background="@drawable/btn_normal_1"/>
+
+
+</LinearLayout>
